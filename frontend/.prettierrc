@@ -1,0 +1,25 @@
+{
+  "useTabs": false,
+  "printWidth": 120,
+  "tabWidth": 2,
+  "proseWrap": "always",
+  "singleQuote": false,
+  "trailingComma": "all",
+  "bracketSameLine": false,
+  "importOrder": [
+    "^react$",
+    "<THIRD_PARTY_MODULES>",
+    "^types/(.*)$",
+    "^hooks/(.*)$",
+    "^constants/(.*)$",
+    "^functions/(.*)$",
+    "^components/(.*)$",
+    "^images/(.*)$",
+    "^videos/(.*)$",
+    "^(.*).functions",
+    "^(.*).module.scss$",
+    "^(.*).(scss|css)$"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

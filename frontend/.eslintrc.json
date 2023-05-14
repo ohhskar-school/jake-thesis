@@ -1,0 +1,100 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:typescript-sort-keys/recommended"
+  ],
+  "plugins": [
+    "sort-destructure-keys"
+  ],
+  "rules": {
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": [
+          {
+            "group": [
+              "../*"
+            ],
+            "message": "Usage of relative parent imports is not allowed."
+          }
+        ]
+      }
+    ],
+    "no-trailing-spaces": "error",
+    "prettier/prettier": "error",
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "function-declaration",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-sort-props": [
+      "error",
+      {
+        "callbacksLast": true,
+        "ignoreCase": false,
+        "multiline": "last",
+        "reservedFirst": true,
+        "shorthandFirst": true
+      }
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "sort-destructure-keys/sort-destructure-keys": [
+      "error",
+      {
+        "caseSensitive": false
+      }
+    ],
+    "@next/next/no-img-element": "off",
+    "jsx-a11y/alt-text": [
+      "error",
+      {
+        "elements": [
+          "img",
+          "object",
+          "area",
+          "input[type=\"image\"]"
+        ],
+        "object": [
+          "Object"
+        ],
+        "area": [
+          "Area"
+        ],
+        "input[type=\"image\"]": [
+          "InputImage"
+        ]
+      }
+    ],
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      {
+        "allowSingleExtends": false
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "cypress*/**/*"
+      ],
+      "rules": {
+        "no-restricted-imports": 0
+      }
+    }
+  ]
+}
